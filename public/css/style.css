@@ -1,0 +1,68 @@
+@font-face{
+    font-family: Comfortaa;
+    src: url(./Comfortaa-Regular.ttf);
+}
+
+
+.button{
+    font-size: 70%;
+    background-color: rgba(0, 0, 0, 0.19);
+}
+
+body{
+    font-family: Comfortaa;
+}
+
+#head{
+    text-align: center;
+}
+
+#head{
+    background-color: rgba(0, 0, 0, 0.10);
+}
+
+#diceCon{
+    text-align: center;
+}
+
+
+#hearts{
+    background-color: rgba(0, 0, 0, 0.10);
+}
+
+#statBar{
+    background-color: rgba(0, 0, 0, 0.10);
+}
+
+.heart{
+    height: 1%;
+}
+
+.headerIcon {
+    border-right: solid thin black;
+}
+
+#health{
+    text-align: center;
+}
+
+#statistics{
+    border-bottom: solid thin rgba(0, 0, 0, 0.20);
+}
+
+#nameBox{
+    height: 2px;
+}
+
+.perkStats{
+    background-color: rgba(0, 0, 0, 0.10);
+    border-right: solid thin black;
+}
+
+.perkStat{
+    background-color: rgba(0, 0, 0, 0.10);
+}
+
+#info{
+    text-align: center;
+}

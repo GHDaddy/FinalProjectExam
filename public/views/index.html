@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>RPG Handler</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/foundation.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<!-- Header and stats and stuff -->
+<div id="statistics">
+    <div id="head">
+        <p id="headertext">RPG HANDLER</p>
+    </div>
+
+    <br>
+
+    <div id="stats">
+        <div class="grid-x" id="hearts"> 
+            <div class="small-1 cell"></div>
+            <img src="../images/heart.png" class="heart small-1 cell">
+            <img src="../images/heart.png" class="heart small-1 cell">
+            <img src="../images/heart.png" class="heart small-1 cell">
+            <img src="../images/heart.png" class="heart small-1 cell">
+            <img src="../images/heart.png" class="heart small-1 cell">
+            <img src="../images/heart.png" class="heart small-1 cell">
+            <img src="../images/heart.png" class="heart small-1 cell">
+            <img src="../images/heart.png" class="heart small-1 cell">
+            <img src="../images/heart.png" class="heart small-1 cell">
+            <img src="../images/heart.png" class="heart small-1 cell">
+            <div class="small-1 cell"></div>
+        </div>
+        <div class="grid-x" id="statBar">
+            <div class="small-8 cell headerIcon" id="nameChar">Name:</div>
+            <div class="small-4 cell" id="health">Health:</div>
+        </div>
+        <br>
+        <div id="diceCon" class="grid-x">
+            <div class="small 5 cell"></div>
+            <div id="rollDice" class="small 2 cell">No Dice Rolled</div>
+        </div>
+
+        <div class="grid-x">
+        <button id="4Dice" class="button small-3 cell">4 Sided</button>
+        <button id="6Dice" class="button small-3 cell">6 Sided</button>
+        <button id="8Dice" class="button small-3 cell">8 Sided</button>
+        <button id="10Dice" class="button small-3 cell">10 Sided</button>
+        <button id="12Dice" class="button small-4 cell">12 Sided</button>
+
+        <button id="20Dice" class="button small-4 cell">20 Sided</button>
+        <button id="100Dice" class="button small-4 cell">100 Sided</button>
+        </div>
+    </div>
+    
+    
+    </div>
+    <br>
+    <p id="info">- Info -</p>
+    <div id="otherStats">
+        <div class="grid-x">
+            <div class="small-3 cell perkStats" id="type">Type: </div>
+            <div class="small-5 cell perkStats" id="strength">Strength: </div>
+            <div class="small-4 cell perkStat" id="dex">Dex: </div>
+        </div>
+        <br>
+        <div class="grid-x">
+            <div class="small-3 cell perkStats" id="con">Con: </div>
+            <div class="small-5 cell perkStats" id="int">Int: </div>
+            <div class="small-4 cell perkStat" id="wis">Wis: </div>
+        </div>
+        <br>
+        <div class="grid-x">
+            <div class="small-3 cell perkStats" id="cha">Cha: </div>
+            <div class="small-5 cell perkStats" id="armor">Armor: </div>
+            <div class="small-4 cell perkStat"></div>
+        </div>
+        <br>
+        <p id="info">- Effort -</p>
+        <div class="grid-x">
+            <div class="small-3 cell perkStats" id="work">Work: </div>
+            <div class="small-3 cell perkStats" id="damage">Dam: </div>
+            <div class="small-3 cell perkStats" id="magic">Mag: </div>
+            <div class="small-3 cell perkStat" id="ultimate">Ult: </div>
+            
+        </div>
+    </div>
+</body>
+<script type="module" src="../js/main.js"></script>
+</html>

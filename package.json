@@ -1,0 +1,16 @@
+{
+    "name": "template",
+    "version": "1.0.0",
+    "description": "This is a template lol",
+    "main": "bin/server",
+    "scripts": {
+      "start": "node bin/server"
+    },
+    "author": "Gavin Brostar",
+    "license": "MIT",
+    "dependencies": {
+      "ejs": "latest",
+      "formidable": "latest",
+      "nedb": "latest"
+    }
+  }

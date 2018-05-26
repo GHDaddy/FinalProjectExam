@@ -6,6 +6,10 @@
 
 .button{
     font-size: 70%;
+    background-color: rgba(0, 0, 0, 0.29);
+}
+
+.button:Hover{
     background-color: rgba(0, 0, 0, 0.19);
 }
 
@@ -65,4 +69,35 @@ body{
 
 #info{
     text-align: center;
+}
+
+#cardText{
+    text-align: center;
+}
+
+/* Desktop */
+@media screen and (min-width: 769px){
+    body{
+        padding: 2%;
+        font-size: 1.6em
+    }
+
+    #headertext{
+        font-size: 2em; 
+    }
+
+    .heart{
+        text-align: center;
+        max-width: 2em;
+    }
+
+    #hearts{
+        max-width: 40%;
+        border-bottom: solid thin black;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 426px) and (max-width: 768px){
+
 }

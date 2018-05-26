@@ -15,25 +15,33 @@
 <!-- Header and stats and stuff -->
 <div id="statistics">
     <div id="head">
-        <p id="headertext">RPG HANDLER</p>
+        <p id="headertext">- RPG HANDLER -</p>
     </div>
 
     <br>
 
     <div id="stats">
-        <div class="grid-x" id="hearts"> 
+        <div class="grid-x">
             <div class="small-1 cell"></div>
-            <img src="../images/heart.png" class="heart small-1 cell">
-            <img src="../images/heart.png" class="heart small-1 cell">
-            <img src="../images/heart.png" class="heart small-1 cell">
-            <img src="../images/heart.png" class="heart small-1 cell">
-            <img src="../images/heart.png" class="heart small-1 cell">
-            <img src="../images/heart.png" class="heart small-1 cell">
-            <img src="../images/heart.png" class="heart small-1 cell">
-            <img src="../images/heart.png" class="heart small-1 cell">
-            <img src="../images/heart.png" class="heart small-1 cell">
-            <img src="../images/heart.png" class="heart small-1 cell">
+        
+        <div class="small-4 cell button" id="lessHealth">-2 Health</div>
+        <div class="small-2 cell"></div>
+        <div class="small-4 cell button" id="moreHealth">+2 Health</div>
+        
+    </div>
+        <div class="grid-x" id="hearts">
             <div class="small-1 cell"></div>
+            <img src="../images/heart.png" class="heart small-1 cell" id="100heart">
+            <img src="../images/heart.png" class="heart small-1 cell" id="90heart">
+            <img src="../images/heart.png" class="heart small-1 cell" id="80heart">
+            <img src="../images/heart.png" class="heart small-1 cell" id="70heart">
+            <img src="../images/heart.png" class="heart small-1 cell" id="60heart">
+            <img src="../images/heart.png" class="heart small-1 cell" id="50heart">
+            <img src="../images/heart.png" class="heart small-1 cell" id="40heart">
+            <img src="../images/heart.png" class="heart small-1 cell" id="30heart">
+            <img src="../images/heart.png" class="heart small-1 cell" id="20heart">
+            <img src="../images/heart.png" class="heart small-1 cell" id="10heart">
+            
         </div>
         <div class="grid-x" id="statBar">
             <div class="small-8 cell headerIcon" id="nameChar">Name:</div>
@@ -56,8 +64,14 @@
         <button id="100Dice" class="button small-4 cell">100 Sided</button>
         </div>
     </div>
-    
-    
+
+            <div id="cardText">No Card Drawn</div>
+        <div class="grid-x">
+            <div class="small-4 cell"></div>
+            <button id="drawCard" class="button small-4 cell">Draw Card</button>
+            <div class="small-4 cell"></div>
+        </div>
+
     </div>
     <br>
     <p id="info">- Info -</p>
@@ -77,7 +91,6 @@
         <div class="grid-x">
             <div class="small-3 cell perkStats" id="cha">Cha: </div>
             <div class="small-5 cell perkStats" id="armor">Armor: </div>
-            <div class="small-4 cell perkStat"></div>
         </div>
         <br>
         <p id="info">- Effort -</p>
@@ -89,6 +102,9 @@
             
         </div>
     </div>
+    <script type="module" src="../js/main.js"></script>
 </body>
-<script type="module" src="../js/main.js"></script>
+
+    
+
 </html>

@@ -35,10 +35,18 @@ export default class EventHandler{
         this.cardNum;
         this.cardText;
         
-        this.healthHandler();
+        this.enemyType;
+        this.enemyHealth;
+        this.damageEnemy;
+        this.enemyHealthPrompt;
+        this.enemyDamageButton;
+        this.enemyChangeButton;
+        
         this.getElements();
         
         this.infoPrompt();
+        this.playerHealthHandler();
+        this.denizenHealth();
     }
     infoPrompt(){
         document.getElementById("health").innerHTML = "Health: " + this.Health;
@@ -160,12 +168,14 @@ export default class EventHandler{
             this.Health--;
             console.log(this.Health);
             document.getElementById("health").innerHTML = "Health: " + this.Health;
+            this.playerHealthHandler();
         })
 
         this.moreHealth = document.getElementById("moreHealth").addEventListener("click", () => {
             this.Health++;
             console.log(this.Health);
             document.getElementById("health").innerHTML = "Health: " + this.Health;
+            this.playerHealthHandler();
         })
 
         //card button
@@ -173,18 +183,127 @@ export default class EventHandler{
             this.cardNum = Math.floor(Math.random() * 10)+1;
             this.cardText.innerHTML = this.cardNum; 
         })
+
+        
     }
 
     //handles heart visibility
-    healthHandler(){
-        if (this.Health < 100){
-            console.log("EGG NOG");
-            document.getElementById("100heart").style.visibility = 'hidden';
-        }
-
+    playerHealthHandler(){
         if (this.Health < 90){
-
+            document.getElementById("100heart").style.visibility = "hidden";
         }
+        if (this.Health >= 90){
+            document.getElementById("100heart").style.visibility = "visible";
+        }
+
+
+        if (this.Health < 80){
+            document.getElementById("90heart").style.visibility = "hidden";
+        }
+
+        if (this.Health >= 80){
+            document.getElementById("90heart").style.visibility = "visible";
+        }
+
+
+        if (this.Health < 70){
+            document.getElementById("80heart").style.visibility = "hidden";
+        }
+
+        if (this.Health >= 70){
+            document.getElementById("80heart").style.visibility = "visible";
+        }
+
+
+        if (this.Health < 60){
+            document.getElementById("70heart").style.visibility = "hidden";
+        }
+
+        if (this.Health >= 60){
+            document.getElementById("70heart").style.visibility = "visible";
+        }
+
+
+        if (this.Health < 50){
+            document.getElementById("60heart").style.visibility = "hidden";
+        }
+
+        if (this.Health >= 50){
+            document.getElementById("60heart").style.visibility = "visible";
+        }
+
+
+        if (this.Health < 40){
+            document.getElementById("50heart").style.visibility = "hidden";
+        }
+
+        if (this.Health >= 40){
+            document.getElementById("50heart").style.visibility = "visible";
+        }
+
+
+        if (this.Health < 30){
+            document.getElementById("40heart").style.visibility = "hidden";
+        }
+
+        if (this.Health >= 30){
+            document.getElementById("40heart").style.visibility = "visible";
+        }
+
+
+        if (this.Health < 20){
+            document.getElementById("30heart").style.visibility = "hidden";
+        }
+
+        if (this.Health >= 20){
+            document.getElementById("30heart").style.visibility = "visible";
+        }
+
+
+        if (this.Health < 10){
+            document.getElementById("20heart").style.visibility = "hidden";
+        }
+
+        if (this.Health >= 10){
+            document.getElementById("20heart").style.visibility = "visible";
+        }
+
+
+        if (this.Health <= 0){
+            document.getElementById("10heart").style.visibility = "hidden";
+        }
+
+        if (this.Health > 0){
+            document.getElementById("10heart").style.visibility = "visible";
+        }
+    }
+
+    denizenHealth(){
+        this.enemyChangeButton = document.getElementById("changeButton").addEventListener("click", () =>{
+            this.enemyType = window.prompt("What's the enemy?");
+            this.enemyHealth = Number(window.prompt("What's it's health?"));
+            while(isNaN(this.enemyHealth)){
+                this.enemyHealth = Number(window.prompt("That's not a number, try again."))
+            }
+            document.getElementById("denizenName").innerHTML = "Enemy Type: " + this.enemyType;
+            document.getElementById("denizenHealth").innerHTML = "Health: " + this.enemyHealth;
+        })
+        
+        this.enemyDamageButton = document.getElementById("damageButton").addEventListener("click", () => {
+            this.damageEnemy = Number(window.prompt("How much damage did you deal?"));
+            while(isNaN(this.damageEnemy)){
+                this.damageEnemy = Number(window.prompt("That's not a number, try again!"));
+            }
+            this.enemyHealth = this.enemyHealth - this.damageEnemy;
+            console.log(this.enemyHealth);
+            document.getElementById("denizenHealth").innerHTML = "Health: " + this.enemyHealth;
+            if (this.enemyHealth <= 0){
+                document.getElementById("denizenName").innerHTML = "Enemy Type: ";
+                document.getElementById("denizenHealth").innerHTML = "Health: ";
+    
+            }
+        })
+        
     }
 
 }

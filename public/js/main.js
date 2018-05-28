@@ -9,8 +9,6 @@ class Main{
     }
 
     prepUX(){
-        this.EventHandler.healthHandler();
-        this.EventHandler.getElements();
     }
 }
 

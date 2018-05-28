@@ -75,6 +75,18 @@ body{
     text-align: center;
 }
 
+#denizen{
+    background-color: rgba(0, 0, 0, 0.10);
+}
+
+#denizenHead{
+    text-align: center;
+}
+
+.denButtons{
+    font-size: 50%;
+}
+
 /* Desktop */
 @media screen and (min-width: 769px){
     body{
